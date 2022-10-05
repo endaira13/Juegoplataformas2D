@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables; 
 
 public class Playermove : MonoBehaviour
 {
     public float speed = 5;
     private float horizontal;
     private Transform playerTransform;
+    private float vertical;
+
+    public PlayableDirector director;
 
     private Rigidbody2D rb; 
+    private Animator anim;
 
     // Start is called before the first frame update
 
     private void Awake() 
     {
       rb = GetComponent<Rigidbody2D>();
+      anim = GetComponent<Animator>();
+
     }
     void Start()
     {
@@ -26,6 +33,27 @@ public class Playermove : MonoBehaviour
     {
        horizontal = Input.GetAxisRaw("Horizontal");
 
+       if(horizontal == 0)
+       {
+        anim.SetBool("Correr", false);
+       }
+       else
+       {
+        anim.SetBool("Correr", true);
+       }
+        vertical = Input.GetAxisRaw("Vertical");
+       if(vertical == 0)
+       {
+        anim.SetBool("Saltar", false);
+       }
+
+       else
+       {
+        anim.SetBool("Saltar", true);
+       }
+
+
+
        //playerTransform.position += new Vector3(horizontal * speed * Time.deltaTime,0,0);
 
        //playerTransform.Translate(Vector3.right * horizontal * speed * Time.deltaTime, Space.World);
@@ -35,5 +63,14 @@ public class Playermove : MonoBehaviour
     private void FixedUpdate() 
     {
       rb.velocity = new Vector2(horizontal * speed ,0);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+      if(other.gameObject.tag == "cinematica")
+      {
+        director.Play();
+      }
+      
     }
 }

@@ -8,12 +8,19 @@ public class Playermove : MonoBehaviour
     public float speed = 5;
     private float horizontal;
     private Transform playerTransform;
-    private float vertical;
+    private float jump;
+    public float jumpForce = 10;
+    public bool isGrounded;
+    
+    
+    
+    
 
     public PlayableDirector director;
 
     private Rigidbody2D rb; 
     private Animator anim;
+    
 
     // Start is called before the first frame update
 
@@ -33,24 +40,27 @@ public class Playermove : MonoBehaviour
     {
        horizontal = Input.GetAxisRaw("Horizontal");
 
+
        if(horizontal == 0)
        {
-        anim.SetBool("Correr", false);
+          anim.SetBool("Correr", true);
        }
+      
        else
        {
-        anim.SetBool("Correr", true);
-       }
-        vertical = Input.GetAxisRaw("Vertical");
-       if(vertical == 0)
-       {
-        anim.SetBool("Saltar", false);
+          anim.SetBool("Correr", false);
        }
 
+       if(jump == 0)
+       {
+         anim.SetBool("Saltar", true);
+       }
        else
        {
-        anim.SetBool("Saltar", true);
+         anim.SetBool("Saltar", false);
        }
+       
+      
 
 
 
@@ -63,6 +73,14 @@ public class Playermove : MonoBehaviour
     private void FixedUpdate() 
     {
       rb.velocity = new Vector2(horizontal * speed ,0);
+      
+
+      if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
+      {
+        rb.AddForce(new Vector2(0f,jumpForce),ForceMode2D.Impulse);
+      }
+
+      
     }
 
     void OnTriggerEnter2D(Collider2D other)

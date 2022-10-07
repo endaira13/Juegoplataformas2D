@@ -6,15 +6,16 @@ public class Ground : MonoBehaviour
 {   
     public static bool isGrounded;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+       isGrounded = false; 
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+       isGrounded = false; 
+    }
+    
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }

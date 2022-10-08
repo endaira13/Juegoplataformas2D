@@ -5,21 +5,18 @@ using UnityEngine.Playables;
 
 public class Playermove : MonoBehaviour
 {
-    public float speed = 5;
+    public float speed = 5f;
     private float horizontal;
     private Transform playerTransform;
     private float jump;
-    public float jumpForce = 10;
-    public bool isGrounded;
-    
-    
-    
-    
-
+    public float jumpForce = 10f;
+    public float gravity = 25f;
+   
     public PlayableDirector director;
 
     private Rigidbody2D rb; 
     private Animator anim;
+    
     
 
     // Start is called before the first frame update
@@ -43,21 +40,23 @@ public class Playermove : MonoBehaviour
 
        if(horizontal == 0)
        {
-          anim.SetBool("Correr", true);
+          anim.SetBool("Correr", false);
        }
       
        else
        {
-          anim.SetBool("Correr", false);
+          anim.SetBool("Correr", true);
        }
 
+       jump = Input.GetAxisRaw("Jump");
+        
        if(jump == 0)
        {
-         anim.SetBool("Saltar", true);
+         anim.SetBool("Saltar", false);
        }
        else
        {
-         anim.SetBool("Saltar", false);
+         anim.SetBool("Saltar", true);
        }
        
       
@@ -73,14 +72,22 @@ public class Playermove : MonoBehaviour
     private void FixedUpdate() 
     {
       rb.velocity = new Vector2(horizontal * speed ,0);
+      if(rb.velocity.x > 0)
+       {
+         transform.localScale = new Vector3(1f, 1f, 1f);
+       }
+
+       else if(rb.velocity.x < 0)
+       {
+         transform.localScale = new Vector3(-1f, 1f, 1f);  
+       }
       
 
-      if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
-      {
-        rb.AddForce(new Vector2(0f,jumpForce),ForceMode2D.Impulse);
-      }
-
-      
+      if(Input.GetButton("Jump"))
+        {
+          rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+          anim.SetBool("Saltar", true);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)

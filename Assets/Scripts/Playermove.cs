@@ -59,6 +59,9 @@ public class Playermove : MonoBehaviour
          anim.SetBool("Saltar", true);
        }
        
+       //GameManager.Instance.Restavidas();
+       //GameManager.Instance.vidas;
+       //Global.nivel = 1;
       
 
 

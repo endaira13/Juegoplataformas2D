@@ -62,15 +62,12 @@ public class Playermove : MonoBehaviour
        //GameManager.Instance.Restavidas();
        //GameManager.Instance.vidas;
        //Global.nivel = 1;
-      
-
-
-
        //playerTransform.position += new Vector3(horizontal * speed * Time.deltaTime,0,0);
 
        //playerTransform.Translate(Vector3.right * horizontal * speed * Time.deltaTime, Space.World);
 
     }
+
 
     private void FixedUpdate() 
     {
@@ -101,4 +98,6 @@ public class Playermove : MonoBehaviour
       }
       
     }
+
+
 }

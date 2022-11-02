@@ -7,7 +7,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public int vidas = 3;
     public int puntos = 0;
-
+    private int Star;
+    
+    
+    
     
     void Awake()
     {

@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    private SFXManager sfxManager;
     public int vidas = 3;
     public int puntos = 0;
     private int Star;
+    public Text ScoreText;
+    int ScoreNumber;
     
     
     
@@ -25,6 +29,8 @@ public class GameManager : MonoBehaviour
        }
 
        DontDestroyOnLoad(this);
+
+        sfxManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
     }
 
     public void Restavidas()
@@ -36,5 +42,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+    public void DeathStar(GameObject star)
+    {
+        sfxManager.StarSound();
+        ScoreNumber += 1;
+        ScoreText.text = "" + ScoreNumber;
     }
 }

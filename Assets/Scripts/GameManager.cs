@@ -12,12 +12,17 @@ public class GameManager : MonoBehaviour
     private int Star;
     public Text ScoreText;
     int ScoreNumber;
+    public int CantDeCorazones;
+    
+
     
     
+
     
     
     void Awake()
     {
+      
         //Si ya hay una instancia y no soy yo me destruyo
        if(Instance != null && Instance != this) 
        {
@@ -30,12 +35,13 @@ public class GameManager : MonoBehaviour
 
        DontDestroyOnLoad(this);
 
-        sfxManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
+       
     }
 
     public void Restavidas()
     {
-        vidas--;
+        
+        CantDeCorazones --;
     }
 
     // Update is called once per frame
@@ -45,8 +51,14 @@ public class GameManager : MonoBehaviour
     }
     public void DeathStar(GameObject star)
     {
-        sfxManager.StarSound();
+        SFXManager.Instance.StarSound();
         ScoreNumber += 1;
         ScoreText.text = "" + ScoreNumber;
+    }
+
+    public void DeathBomba(GameObject bomba)
+    {
+        SFXManager.Instance.BombaSound();
+        
     }
 }

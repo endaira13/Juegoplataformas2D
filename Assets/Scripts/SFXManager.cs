@@ -5,15 +5,31 @@ using UnityEngine;
 public class SFXManager : MonoBehaviour
 {
     public AudioClip starSFX;
-    private AudioSource _audioSourcer;
+    public AudioClip bombaSFX;
+    private AudioSource audioSourcer;
+    public static SFXManager Instance;
     // Start is called before the first frame update
     void Awake()
     {
-        _audioSourcer = GetComponent<AudioSource>();
+        audioSourcer = GetComponent<AudioSource>();
+        if(Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
+        DontDestroyOnLoad(this);
     }
 
     public void StarSound()
     {
-        _audioSourcer.PlayOneShot(starSFX);
+        audioSourcer.PlayOneShot(starSFX);
+    }
+    public void BombaSound()
+    {
+        audioSourcer.PlayOneShot(bombaSFX);
     }
 }

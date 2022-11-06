@@ -3,7 +3,11 @@ guid: 6d7e25d29356d0e48a86b66e3fd2e309
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - starSFX: {instanceID: 0}
+  - bombaSFX: {instanceID: 0}
+  - victoriaSFX: {instanceID: 0}
+  - muerteSFX: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

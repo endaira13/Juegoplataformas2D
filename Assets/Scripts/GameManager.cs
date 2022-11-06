@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     private SFXManager sfxManager;
-    public int vidas = 3;
+    private int vidas = 3;
     public int puntos = 0;
     private int Star;
     public Text ScoreText;
     int ScoreNumber;
-    public int CantDeCorazones;
+    public GameObject[] hearts;
     
 
     
@@ -37,23 +38,60 @@ public class GameManager : MonoBehaviour
 
        
     }
+    void Start()
+    {
+        vidas = hearts.Length;
+    }
 
     public void Restavidas()
     {
+        if(vidas < 1)
+        {
+          Destroy(hearts[0].gameObject); 
+          Invoke("loadMainMenu", 1);
+        }
+        if(vidas < 2)
+        {
+          Destroy(hearts[1].gameObject); 
+          
+        }
+        if (vidas < 3)
+        {
+          Destroy(hearts[2].gameObject);
+           
+        }
+
+        vidas --;
         
-        CantDeCorazones --;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
     public void DeathStar(GameObject star)
     {
         SFXManager.Instance.StarSound();
         ScoreNumber += 1;
         ScoreText.text = "" + ScoreNumber;
+        Invoke("loadMenu", 1);
+    }
+
+    public void loadMenu()
+    {
+       if (ScoreNumber == 17)
+        {
+            SceneManager.LoadScene("Victoria");
+            SFXManager.Instance.VictoriaSound();
+        }
+    }
+
+    public void loadMainMenu()
+    {
+       SceneManager.LoadScene("GameOver");
+       SFXManager.Instance.MuerteSound(); 
     }
 
     public void DeathBomba(GameObject bomba)
@@ -61,4 +99,6 @@ public class GameManager : MonoBehaviour
         SFXManager.Instance.BombaSound();
         
     }
+
+
 }

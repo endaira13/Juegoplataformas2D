@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
-using UnityEngine.UI; 
+ 
 
 public class Playermove : MonoBehaviour
 {
@@ -19,11 +19,7 @@ public class Playermove : MonoBehaviour
     private Animator anim;
     private GameManager gameManager;
     
-    public Image Corazon;
-    public RectTransform PositionPrimerCorazon;
-    public Canvas MyCanvas;
-    public int Offset;
-    public int CantDeCorazones;
+    
     
     
 
@@ -39,13 +35,7 @@ public class Playermove : MonoBehaviour
     void Start()
     {
       playerTransform = GetComponent<Transform>();
-      Transform PosicionCorazon = PositionPrimerCorazon;
-        for (int i = 0; i < CantDeCorazones; i ++)
-        {
-          Image NewCorazon = Instantiate(Corazon,PosicionCorazon.position, Quaternion.identity);
-          NewCorazon.transform.parent = MyCanvas.transform;
-          PosicionCorazon.position = new Vector2(PosicionCorazon.position.x + Offset, PosicionCorazon.position.y);
-        }
+      
     }
 
     // Update is called once per frame
@@ -75,7 +65,7 @@ public class Playermove : MonoBehaviour
          anim.SetBool("Saltar", true);
        }
        
-       GameManager.Instance.Restavidas();
+       
        //GameManager.Instance.vidas;
        //Global.nivel = 1;
        //playerTransform.position += new Vector3(horizontal * speed * Time.deltaTime,0,0);
@@ -120,8 +110,8 @@ public class Playermove : MonoBehaviour
       if(other.gameObject.CompareTag("Bomba"))
       {
         gameManager.DeathBomba(other.gameObject);
-        Destroy(MyCanvas.transform.GetChild(CantDeCorazones + 1).gameObject);
-        CantDeCorazones -= 1;
+        GameManager.Instance.Restavidas();
+       
       }
         
     }

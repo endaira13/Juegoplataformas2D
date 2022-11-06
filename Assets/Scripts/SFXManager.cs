@@ -6,6 +6,8 @@ public class SFXManager : MonoBehaviour
 {
     public AudioClip starSFX;
     public AudioClip bombaSFX;
+    public AudioClip victoriaSFX;
+    public AudioClip muerteSFX;
     private AudioSource audioSourcer;
     public static SFXManager Instance;
     // Start is called before the first frame update
@@ -31,5 +33,14 @@ public class SFXManager : MonoBehaviour
     public void BombaSound()
     {
         audioSourcer.PlayOneShot(bombaSFX);
+    }
+
+    public void VictoriaSound()
+    {
+        audioSourcer.PlayOneShot(victoriaSFX);
+    }
+    public void MuerteSound()
+    {
+        audioSourcer.PlayOneShot(muerteSFX);
     }
 }

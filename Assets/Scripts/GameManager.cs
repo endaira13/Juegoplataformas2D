@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     private SFXManager sfxManager;
-    private int vidas = 3;
+    private int vidas = 6;
     public int puntos = 0;
     private int Star;
     public Text ScoreText;
@@ -16,10 +16,6 @@ public class GameManager : MonoBehaviour
     public GameObject[] hearts;
     
 
-    
-    
-
-    
     
     void Awake()
     {
@@ -41,30 +37,52 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         vidas = hearts.Length;
+        
     }
 
     public void Restavidas()
     {
-        if(vidas < 1)
+       
+        if(vidas == 1)
         {
           Destroy(hearts[0].gameObject); 
           Invoke("loadMainMenu", 1);
+          
         }
-        if(vidas < 2)
+        else if(vidas == 2)
         {
           Destroy(hearts[1].gameObject); 
           
         }
-        if (vidas < 3)
+        else if (vidas == 3)
         {
+          
           Destroy(hearts[2].gameObject);
-           
+          
         }
-
-        vidas --;
+        else if (vidas == 4)
+        {
+          
+          Destroy(hearts[3].gameObject);
+          
+        }
+        else if (vidas == 5)
+        {
+          
+          Destroy(hearts[4].gameObject);
+          
+        }
+        else if (vidas == 6)
+        {
+    
+          Destroy(hearts[5].gameObject);
+          
+        }
+        vidas -= 1;
         
-
     }
+
+    
 
     // Update is called once per frame
     void Update()

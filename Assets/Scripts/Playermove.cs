@@ -18,6 +18,8 @@ public class Playermove : MonoBehaviour
     private Rigidbody2D rb; 
     private Animator anim;
     private GameManager gameManager;
+
+    
     
     
     
@@ -66,8 +68,8 @@ public class Playermove : MonoBehaviour
        }
        
        
-       //GameManager.Instance.vidas;
-       //Global.nivel = 1;
+       
+       Global.nivel = 1;
        //playerTransform.position += new Vector3(horizontal * speed * Time.deltaTime,0,0);
 
        //playerTransform.Translate(Vector3.right * horizontal * speed * Time.deltaTime, Space.World);
@@ -107,7 +109,7 @@ public class Playermove : MonoBehaviour
         Destroy(other.gameObject);
         gameManager.DeathStar(other.gameObject);
       }
-      if(other.gameObject.CompareTag("Bomba"))
+      if(other.gameObject.layer == 7)
       {
         gameManager.DeathBomba(other.gameObject);
         GameManager.Instance.Restavidas();

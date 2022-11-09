@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 301, y: -39}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 204, y: -39}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &75400640
 MonoBehaviour:
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 178454374}
   - component: {fileID: 178454373}
   - component: {fileID: 178454372}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bomb1 (6)
   m_TagString: Bomba
   m_Icon: {fileID: 0}
@@ -921,6 +921,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215273561}
   m_CullTransparentMesh: 1
+--- !u!1 &224419485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224419486}
+  - component: {fileID: 224419488}
+  - component: {fileID: 224419487}
+  m_Layer: 5
+  m_Name: vida 6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &224419486
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224419485}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1379521626}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 732, y: -39}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &224419487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224419485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6cf993ca8ab65ff4487321732c447c73, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &224419488
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224419485}
+  m_CullTransparentMesh: 1
 --- !u!1 &236321936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,6 +1130,82 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!1 &295936420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295936421}
+  - component: {fileID: 295936423}
+  - component: {fileID: 295936422}
+  m_Layer: 5
+  m_Name: vida 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &295936421
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295936420}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1379521626}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 472, y: -39}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &295936422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295936420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6cf993ca8ab65ff4487321732c447c73, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &295936423
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295936420}
+  m_CullTransparentMesh: 1
 --- !u!1 &344974430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1485,7 @@ GameObject:
   - component: {fileID: 379346172}
   - component: {fileID: 379346171}
   - component: {fileID: 379346170}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bomb1 (7)
   m_TagString: Bomba
   m_Icon: {fileID: 0}
@@ -1491,8 +1643,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 527, y: -39}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 337, y: -39}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &433252330
 MonoBehaviour:
@@ -1678,7 +1830,7 @@ GameObject:
   - component: {fileID: 617548915}
   - component: {fileID: 617548914}
   - component: {fileID: 617548913}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bomb1 (4)
   m_TagString: Bomba
   m_Icon: {fileID: 0}
@@ -1879,7 +2031,7 @@ GameObject:
   - component: {fileID: 644825602}
   - component: {fileID: 644825601}
   - component: {fileID: 644825600}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bomb1 (8)
   m_TagString: Bomba
   m_Icon: {fileID: 0}
@@ -2148,7 +2300,7 @@ GameObject:
   - component: {fileID: 721426991}
   - component: {fileID: 721426990}
   - component: {fileID: 721426989}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bomb1 (1)
   m_TagString: Bomba
   m_Icon: {fileID: 0}
@@ -2284,7 +2436,7 @@ GameObject:
   - component: {fileID: 723199755}
   - component: {fileID: 723199754}
   - component: {fileID: 723199753}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bomb1 (9)
   m_TagString: Bomba
   m_Icon: {fileID: 0}
@@ -2443,7 +2595,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 71, y: -39}
-  m_SizeDelta: {x: 150, y: 150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &734513926
 MonoBehaviour:
@@ -2734,6 +2886,82 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1163346057}
   m_Damping: 0.5
   m_MaxWindowSize: -1
+--- !u!1 &858490954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858490955}
+  - component: {fileID: 858490957}
+  - component: {fileID: 858490956}
+  m_Layer: 5
+  m_Name: vida 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &858490955
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858490954}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1379521626}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 600, y: -39}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &858490956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858490954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6cf993ca8ab65ff4487321732c447c73, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &858490957
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858490954}
+  m_CullTransparentMesh: 1
 --- !u!1 &876914409
 GameObject:
   m_ObjectHideFlags: 0
@@ -3638,7 +3866,7 @@ GameObject:
   - component: {fileID: 1292129035}
   - component: {fileID: 1292129034}
   - component: {fileID: 1292129033}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bomb1 (2)
   m_TagString: Bomba
   m_Icon: {fileID: 0}
@@ -3805,7 +4033,7 @@ GameObject:
   - component: {fileID: 1354825622}
   - component: {fileID: 1354825621}
   - component: {fileID: 1354825620}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bomb1 (3)
   m_TagString: Bomba
   m_Icon: {fileID: 0}
@@ -4023,6 +4251,9 @@ RectTransform:
   - {fileID: 734513925}
   - {fileID: 75400639}
   - {fileID: 433252329}
+  - {fileID: 295936421}
+  - {fileID: 858490955}
+  - {fileID: 224419486}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4280,6 +4511,7 @@ GameObject:
   - component: {fileID: 1552404819}
   - component: {fileID: 1552404818}
   - component: {fileID: 1552404821}
+  - component: {fileID: 1552404822}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4388,6 +4620,19 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1552404822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552404817}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39466b81a057e0f4589774057c954d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 108593471}
 --- !u!1 &1574453455
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,6 +5238,9 @@ MonoBehaviour:
   - {fileID: 734513924}
   - {fileID: 75400638}
   - {fileID: 433252328}
+  - {fileID: 295936420}
+  - {fileID: 858490954}
+  - {fileID: 224419485}
 --- !u!4 &1838194245
 Transform:
   m_ObjectHideFlags: 0
@@ -9839,7 +10087,7 @@ GameObject:
   - component: {fileID: 1958223198}
   - component: {fileID: 1958223196}
   - component: {fileID: 1958223200}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bomb1
   m_TagString: Bomba
   m_Icon: {fileID: 0}
@@ -9975,7 +10223,7 @@ GameObject:
   - component: {fileID: 2020856370}
   - component: {fileID: 2020856369}
   - component: {fileID: 2020856368}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bomb1 (5)
   m_TagString: Bomba
   m_Icon: {fileID: 0}
@@ -10111,7 +10359,7 @@ GameObject:
   - component: {fileID: 2117878750}
   - component: {fileID: 2117878749}
   - component: {fileID: 2117878748}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bomb1 (10)
   m_TagString: Bomba
   m_Icon: {fileID: 0}
